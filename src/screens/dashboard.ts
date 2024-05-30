@@ -1,6 +1,7 @@
 import { addObserver, dispatch } from '../store/index';
 import { navigate } from '../store/actions';
-class Dashboard extends HTMLElement {
+
+export class Dashboard extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });

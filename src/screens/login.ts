@@ -1,7 +1,7 @@
 import { addObserver, dispatch } from '../store/index';
 import { navigate } from '../store/actions';
 
-class Login extends HTMLElement {
+export class Login extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
