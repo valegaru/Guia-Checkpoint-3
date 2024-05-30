@@ -38,3 +38,5 @@ export const dispatch = (action: any) => {
 export const addObserver = (ref: any) => {
 	observers = [...observers, ref];
 };
+
+//lo del carrito de compras y la sesion del usuario se puede guardar con esto
