@@ -34,16 +34,16 @@ export const addProduct = async (product: Omit<Product, "id">) => {
 const getProducts = async () => {
   //saca los documentos de la collection products y les toma una foto guardandolos en la constante
   const querySnapshot = await getDocs(collection(db, "products"));
-  const transformed: Array<Product> = [];
+  const arrayProducts: Array<Product> = [];
 
   //recorre lo que se guardo
   querySnapshot.forEach((doc) => {
     //no trae el id
-    const data: Omit<Product, "id"> = doc.data() as any;
-    transformed.push({ id: doc.id, ...data });
+    const data= doc.data() as any;
+    arrayProducts.push({ id: doc.id, ...data });
   });
 
-  return transformed;
+  return arrayProducts;
 };
 
 export default {
