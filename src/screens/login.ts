@@ -11,7 +11,7 @@ export class Login extends HTMLElement {
 		this.render();
 		const button = this.shadowRoot?.querySelector('button');
 		button?.addEventListener('click', () => {
-			dispatch(navigate('DASHBOARD'));
+			dispatch(navigate('DASHBOARD'));// lanzamiento de la accion
 		});
 	}
 
