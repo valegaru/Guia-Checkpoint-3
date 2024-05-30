@@ -10,7 +10,8 @@ const get = ({ key, defaultValue}: { key: PersistanceKeys; defaultValue: unknown
 };
 
 //guardar lo que haya en el local storage
-const set = ({ key, value, session}: { key: PersistanceKeys; value: unknown; session:boolean}) => {
+//como session comienza en falso, lo manda al local al menos de que se le diga que session es true
+const set = ({ key, value, session=false}: { key: PersistanceKeys; value: unknown; session:boolean}) => {
   //si session es verdad se guarda en el session storage sino se guarda en el local
   const storage = session ? sessionStorage : localStorage;
   const parsed= JSON.stringify(value)
