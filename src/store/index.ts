@@ -9,6 +9,12 @@ export let emptyState = {
   //aqui van todas las variables que quiero que esten de forma global
 	//aqui pone como inicia, puede iniciar vacio incluso
   screen: 'LOGIN',
+	cartShopping:[
+		{
+			size:'',
+			price:'',
+				}
+	],//esto lo tipo en el store de types o aqui mismo
 };
 
 //aqui uso el get de storage
