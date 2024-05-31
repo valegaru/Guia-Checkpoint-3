@@ -14,9 +14,19 @@
 /*!**********************************!*\
   !*** ./src/components/export.ts ***!
   \**********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/export.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Figure\": () => (/* reexport safe */ _figure__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _figure__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./figure */ \"./src/components/figure.ts\");\n\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/export.ts?");
+
+/***/ }),
+
+/***/ "./src/components/figure.ts":
+/*!**********************************!*\
+  !*** ./src/components/figure.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"AttributeFigure\": () => (/* binding */ AttributeFigure),\n/* harmony export */   \"default\": () => (/* binding */ Figure)\n/* harmony export */ });\nvar AttributeFigure;\n(function (AttributeFigure) {\n    AttributeFigure[\"anime\"] = \"anime\";\n    AttributeFigure[\"url\"] = \"url\";\n})(AttributeFigure || (AttributeFigure = {}));\nclass Figure extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n    }\n    static get observedAttributes() {\n        const attrs = {\n            anime: null,\n            url: null,\n        };\n        return Object.keys(attrs);\n    }\n    attributeChangedCallback(propname, oldValue, newValue) {\n        switch (propname) {\n            default:\n                this[propname] = newValue;\n                break;\n        }\n    }\n    //propname:AttributeFigure, oldValue: string|undefined, newValue: string|undefined\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a;\n        const something = this.ownerDocument.createElement('div');\n        (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(something);\n    }\n}\ncustomElements.define('my-figure', Figure);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/figure.ts?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/components/export.ts?"
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _screens_dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/dashboard */ \"./src/screens/dashboard.ts\");\n/* harmony import */ var _screens_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/login */ \"./src/screens/login.ts\");\n/* harmony import */ var _components_export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/export */ \"./src/components/export.ts\");\n/* harmony import */ var _components_export__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_export__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ \"./src/store/index.ts\");\n// recuerda importar las screens\n\n\n\n //importar observers y appState\nclass AppContainer extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: \"open\" });\n        (0,_store__WEBPACK_IMPORTED_MODULE_3__.addObserver)(this); //le estoy diciendo que appContainer va a tener un observador el cual avisa cuando el appState cambia\n    }\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a, _b;\n        //logica para cambiar de screen en el render\n        if (this.shadowRoot)\n            this.shadowRoot.innerHTML = '';\n        switch (_store__WEBPACK_IMPORTED_MODULE_3__.appState.screen) {\n            case 'LOGIN':\n                const login = this.ownerDocument.createElement('app-login');\n                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(login);\n                break;\n            case 'DASHBOARD':\n                const dashboard = this.ownerDocument.createElement('app-dashboard');\n                (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(dashboard);\n                break;\n            default:\n                break;\n        }\n    }\n}\ncustomElements.define('app-container', AppContainer);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _screens_dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/dashboard */ \"./src/screens/dashboard.ts\");\n/* harmony import */ var _screens_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./screens/login */ \"./src/screens/login.ts\");\n/* harmony import */ var _components_export__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/export */ \"./src/components/export.ts\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ \"./src/store/index.ts\");\n// recuerda importar las screens\n\n\n\n //importar observers y appState\nclass AppContainer extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: \"open\" });\n        (0,_store__WEBPACK_IMPORTED_MODULE_3__.addObserver)(this); //le estoy diciendo que appContainer va a tener un observador el cual avisa cuando el appState cambia\n    }\n    connectedCallback() {\n        this.render();\n    }\n    render() {\n        var _a, _b;\n        //logica para cambiar de screen en el render\n        if (this.shadowRoot)\n            this.shadowRoot.innerHTML = '';\n        switch (_store__WEBPACK_IMPORTED_MODULE_3__.appState.screen) {\n            case 'LOGIN':\n                const login = this.ownerDocument.createElement('app-login');\n                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(login);\n                break;\n            case 'DASHBOARD':\n                const dashboard = this.ownerDocument.createElement('app-dashboard');\n                (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(dashboard);\n                break;\n            default:\n                break;\n        }\n    }\n}\ncustomElements.define('app-container', AppContainer);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/index.ts?");
 
 /***/ }),
 
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Login\": () => (/* binding */ Login)\n/* harmony export */ });\n/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/index */ \"./src/store/index.ts\");\n/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/actions */ \"./src/store/actions.ts\");\n\n\nclass Login extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n    }\n    connectedCallback() {\n        var _a;\n        this.render();\n        const button = (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector('button');\n        button === null || button === void 0 ? void 0 : button.addEventListener('click', () => {\n            (0,_store_index__WEBPACK_IMPORTED_MODULE_0__.dispatch)((0,_store_actions__WEBPACK_IMPORTED_MODULE_1__.navigate)('DASHBOARD'));\n        });\n    }\n    render() {\n        if (this.shadowRoot) {\n            this.shadowRoot.innerHTML = `<h1>Login</h1>\r\n\t\t\t<button>Click</button>`;\n        }\n    }\n}\ncustomElements.define('app-login', Login);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/screens/login.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Login\": () => (/* binding */ Login)\n/* harmony export */ });\n/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/index */ \"./src/store/index.ts\");\n/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/actions */ \"./src/store/actions.ts\");\n\n\nclass Login extends HTMLElement {\n    constructor() {\n        super();\n        this.attachShadow({ mode: 'open' });\n    }\n    connectedCallback() {\n        var _a;\n        this.render();\n        const button = (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector('button');\n        button === null || button === void 0 ? void 0 : button.addEventListener('click', () => {\n            (0,_store_index__WEBPACK_IMPORTED_MODULE_0__.dispatch)((0,_store_actions__WEBPACK_IMPORTED_MODULE_1__.navigate)('DASHBOARD')); // lanzamiento de la accion\n        });\n    }\n    render() {\n        if (this.shadowRoot) {\n            this.shadowRoot.innerHTML = `<h1>Login</h1>\r\n\t\t\t<button>Click</button>`;\n        }\n    }\n}\ncustomElements.define('app-login', Login);\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/screens/login.ts?");
 
 /***/ }),
 
@@ -107,18 +117,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
